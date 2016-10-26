@@ -9,24 +9,16 @@ import com.digi.xbee.api.exceptions.XBeeException;
 import com.digi.xbee.api.listeners.IDataReceiveListener;
 import com.digi.xbee.api.models.XBeeMessage;
 
-/**
- * XBee ZigBee Mesh Kit Transmit Data Sample application.
- * 
- * <p>This sample Java application shows how to send and receive data to/from 
- * another XBee devices on the same network using the XBee Java Library.</p>
- * 
- * <p>In this example you can send messages to a specific XBee (unicast) or to 
- * all (broadcast), following the next pattern:
+/*
  *   - Unicast: NODE_IDENTIFIER: message
  *   - Broadcast: ALL: message
- * </p>
  */
 public class MainApp {
 	
 	/* Constants */
 	
 	// TODO Replace with the port where your module is connected to.
-	private static final String PORT = "COM12";
+	private static final String PORT = "COM3";
 	// TODO Replace with the baud rate of your module.
 	private static final int BAUD_RATE = 9600;
 	
@@ -52,8 +44,6 @@ public class MainApp {
 			XBeeNetwork network = myDevice.getNetwork();
                         System.out.println("\nLocal XBee: " + myDevice.getNodeID());
 			System.out.println("\nScanning the network, please wait...");
-                                       
-                        
                         
                         network.addRemoteDevice(network.discoverDevice("RASPBERRY1"));
                         network.addRemoteDevice(network.discoverDevice("RASPBERRY2"));
