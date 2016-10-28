@@ -1,7 +1,6 @@
 package xbeecommcoord;
 
 import java.util.Scanner;
-
 import com.digi.xbee.api.RemoteXBeeDevice;
 import com.digi.xbee.api.XBeeDevice;
 import com.digi.xbee.api.XBeeNetwork;
@@ -9,18 +8,10 @@ import com.digi.xbee.api.exceptions.XBeeException;
 import com.digi.xbee.api.listeners.IDataReceiveListener;
 import com.digi.xbee.api.models.XBeeMessage;
 
-/**
- * XBee ZigBee Mesh Kit Transmit Data Sample application.
- * 
- * <p>This sample Java application shows how to send and receive data to/from 
- * another XBee devices on the same network using the XBee Java Library.</p>
- * 
- * <p>In this example you can send messages to a specific XBee (unicast) or to 
- * all (broadcast), following the next pattern:
+/* 
  *   - Unicast: NODE_IDENTIFIER: message
  *   - Broadcast: ALL: message
- * </p>
- */
+*/
 public class MainApp {
 	
 	/* Constants */
