@@ -8,7 +8,7 @@ import com.digi.xbee.api.exceptions.XBeeException;
 import com.digi.xbee.api.listeners.IDataReceiveListener;
 import com.digi.xbee.api.models.XBeeMessage;
 
-/* 
+/*
  *   - Unicast: NODE_IDENTIFIER: message
  *   - Broadcast: ALL: message
 */
@@ -17,7 +17,7 @@ public class MainApp {
 	/* Constants */
 	
 	// TODO Replace with the port where your module is connected to.
-	private static final String PORT = "COM12";
+	private static final String PORT = "COM3";
 	// TODO Replace with the baud rate of your module.
 	private static final int BAUD_RATE = 9600;
 	
@@ -43,8 +43,6 @@ public class MainApp {
 			XBeeNetwork network = myDevice.getNetwork();
                         System.out.println("\nLocal XBee: " + myDevice.getNodeID());
 			System.out.println("\nScanning the network, please wait...");
-                                       
-                        
                         
                         network.addRemoteDevice(network.discoverDevice("RASPBERRY1"));
                         network.addRemoteDevice(network.discoverDevice("RASPBERRY2"));
